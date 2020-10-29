@@ -1,6 +1,4 @@
-<h1 appTestDirective [textColor]="'red'" [backgroundColor]="'green'">
-  Directive:
-</h1>
+<h1 appTestDirective [textColor]="'red'" [backgroundColor]="'green'">Directive:</h1>
 
 <p appTestDirective>
   cái hay của Directive là nó có thể apply cho tất cả các HTMLElement
@@ -10,7 +8,9 @@
   nó ko có HTML, CSS, Routing riêng giống như Component
 </p>
 
-<button (click)="variable1.highlight('pink')">#variable Directive</button>
+<button (click)="variable1.highlight('pink')">#variable Directive from Template</button>
+<br />
+<button (click)="highlight('green')">#variable directive from TypeScript</button>
 
 <p appTestDirective #variable1="testDirective">
   #variable Directive dùng rất nhiều trong Angular Material => tuyệt
