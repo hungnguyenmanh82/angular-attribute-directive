@@ -1,10 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  HostListener,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appTestDirective]',
@@ -12,7 +6,8 @@ import {
   exportAs: 'testDirective',
 })
 export class TestDirectiveDirective implements OnInit {
-  // @input, @output dùng giống hệt như với Angular Component
+  // @input[], @output() dùng giống hệt như với Angular Component
+  // <h1 appTestDirective [textColor]="'red'" [backgroundColor]="'green'">Directive:</h1>
   @Input() textColor: string;
   @Input() backgroundColor: string;
 
@@ -31,11 +26,13 @@ export class TestDirectiveDirective implements OnInit {
   }
 
   // bắt event liên quan tới HTMLElement
+  // 'mouseenter': là event
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight('yellow');
   }
 
   // bắt event liên quan tới HTMLElement
+  // 'mouseleave': là event
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight('white');
   }

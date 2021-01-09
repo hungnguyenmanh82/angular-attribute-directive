@@ -1,3 +1,4 @@
+import { TitleDirectiveDirective } from './title-directive.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -5,14 +6,9 @@ import { AppComponent } from './app.component';
 import { TestDirectiveDirective } from './test-directive.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TestDirectiveDirective
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, TestDirectiveDirective, TitleDirectiveDirective],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
