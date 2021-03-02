@@ -1,8 +1,18 @@
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
+/**
+ * selector: '<appTestDirective>' để dùng directive như <component> chính là <div>
+ *  Angular material component dùng cách này
+ * vd:
+ * <appTestDirective [textColor]="'red'" [backgroundColor]="'green'"> </appTestDirective>
+ */
+
+/**
+ * selector: '[appTestDirective]' để dùng directive như attribute của html tag <div>, <input>, <p>...
+ * vd:
+ *  <h1 appTestDirective [textColor]="'red'" [backgroundColor]="'green'">Directive:</h1>
+ */
 // vd: <p appTestDirective #variable1="testDirective">
-// selector: '<appTestDirective>' để dùng directive như <component>
-// selector: '[appTestDirective]' để dùng directive như attribute
 @Directive({
   selector: '[appTestDirective]',
   // selector: '<appTestDirective>'
