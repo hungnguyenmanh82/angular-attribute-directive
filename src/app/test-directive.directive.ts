@@ -1,8 +1,11 @@
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 // vd: <p appTestDirective #variable1="testDirective">
+// selector: '<appTestDirective>' để dùng directive như <component>
+// selector: '[appTestDirective]' để dùng directive như attribute
 @Directive({
   selector: '[appTestDirective]',
+  // selector: '<appTestDirective>'
   exportAs: 'testDirective',
 })
 export class TestDirectiveDirective implements OnInit {
