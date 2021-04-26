@@ -1,3 +1,4 @@
+<!-- xem file CSS về cách apply CSS cho html attribute -->
 <h1 appTestDirective [textColor]="'red'" [backgroundColor]="'green'">Directive:</h1>
 
 <p appTestDirective>
@@ -18,3 +19,7 @@
 
 <h1 appTitleDirective #variable2="titleDirective">test appTitleDirective</h1>
 <button (click)="variable2.highlight('red')">#variable2 Directive from Template</button>
+
+<app-show-permissions></app-show-permissions>
+
+<app-show-permissions appHostDirective></app-show-permissions>

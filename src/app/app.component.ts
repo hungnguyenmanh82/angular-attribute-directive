@@ -9,6 +9,8 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
   title = 'b4-directive';
 
+
+
   /**
    * <p appTestDirective #variable1="testDirective">
    * cách gọi #varaible từ TypeScript giống hệt component

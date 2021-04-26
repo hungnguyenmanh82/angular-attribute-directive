@@ -8,7 +8,9 @@ import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/cor
  */
 
 /**
- * selector: '[appTestDirective]' để dùng directive như attribute của html tag <div>, <input>, <p>...
+ * selector: '[appTestDirective]' để dùng directive như @input attribute của html tag <div>, <input>, <p>...
+ *              có thể dùng ở *.html với [] hoặc không. có [] là dùng với @input
+ *
  * vd:
  *  <h1 appTestDirective [textColor]="'red'" [backgroundColor]="'green'">Directive:</h1>
  */
@@ -16,6 +18,7 @@ import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 @Directive({
   selector: '[appTestDirective]',
   // selector: '<appTestDirective>'
+  // dùng cho #var reference
   exportAs: 'testDirective',
 })
 export class TestDirectiveDirective implements OnInit {
@@ -51,6 +54,9 @@ export class TestDirectiveDirective implements OnInit {
   }
 
   public highlight(color: string) {
+    /**
+     * thay đổi các attribute của html Tag chuẩn ở source code
+     */
     this.element.nativeElement.style.backgroundColor = color;
     this.element.nativeElement.style.color = 'blue';
   }

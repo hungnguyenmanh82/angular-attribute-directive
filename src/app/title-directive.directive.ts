@@ -3,6 +3,7 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit } from 
 // vd: <p appTitleDirective #variable2="titleDirective">
 @Directive({
   selector: '[appTitleDirective]',
+  // dùng cho #var reference
   exportAs: 'titleDirective',
 })
 export class TitleDirectiveDirective implements OnInit {
