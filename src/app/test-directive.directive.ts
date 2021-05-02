@@ -27,7 +27,10 @@ export class TestDirectiveDirective implements OnInit {
   @Input() textColor: string;
   @Input() backgroundColor: string;
 
-  // element chinh la HTMLElement chứa Directive này
+  // element chinh la HTMLElement chứa Directive này => dùng Dependency Injection
+  //cách 1: có thể dùng #var @childView để lấy các childView của nó
+  // cách 2: có thể dùng DOM document để lấy bất kỳ html Tag nào dựa vào Id, attribute, css
+  // cách 3: có thể dùng JQuery để lấy bất kỳ html tag nào dựa vào id, attribute, css
   constructor(private element: ElementRef) {}
 
   ngOnInit(): void {

@@ -10,6 +10,7 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit } from 
 })
 export class HostDirectiveDirective implements OnInit {
   /**
+   * DI để truy cập vào Component chứa Directive này
    * Ứng dụng cho mục đích Validation Form rất hay
    */
   constructor(private host: ShowPermissionsComponent) {}
